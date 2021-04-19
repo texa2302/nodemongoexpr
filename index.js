@@ -22,7 +22,8 @@ async function start (){
     try{
         await mongoose.connect('mongodb+srv://artem:Artem2302@cluster0.qeppy.mongodb.net/todos', {
             useNewUrlParser: true,
-            useFindAndModify: false
+            useFindAndModify: false,
+            useUnifiedTopology: true
         })
         app.listen(PORT, () => {
             console.log('Server has been started ...')
